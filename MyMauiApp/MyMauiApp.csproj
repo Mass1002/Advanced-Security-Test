@@ -184,24 +184,34 @@
 		<EmbeddedResource Include="Resources\zh_CN\strings.xml" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="CommonServiceLocator" Version="2.0.7" />
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-		<PackageReference Include="OxyPlot.Core" Version="2.2.0" />
-	    <PackageReference Include="OxyPlot.Maui.Skia" Version="1.1.0" />
-		<PackageReference Include="Plugin.Permissions" Version="6.0.1" />
-		<PackageReference Include="SharpZipLib" Version="1.4.2" />
-		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
-		<PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
-	    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.11" />
-	    <PackageReference Include="SQLitePCLRaw.core" Version="3.0.2" />
-		<PackageReference Include="Unity" Version="5.11.10" />
-		<PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
-		<PackageReference Include="Xam.Plugin.Media" Version="6.0.2" />
-	    <PackageReference Include="ZXing.Net.Maui" Version="0.7.4" />
-	    <PackageReference Include="Microsoft.Maui.Controls" Version="10.0.30" />
-	    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="10.0.30" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-		<PackageReference Include="ZXing.Net.Maui.Controls" Version="0.7.4" />
-	</ItemGroup>
+    <ItemGroup>
+	    <PackageReference Include="CommonServiceLocator" Version="2.0.7" />
+	    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+	    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+	    <PackageReference Include="OxyPlot.Core" Version="2.2.0" />
+	    <PackageReference Include="OxyPlot.Maui.Skia" Version="1.0.2" />
+	    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+	    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+	    <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+	    <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
+	    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.8" />
+	    <PackageReference Include="SQLitePCLRaw.core" Version="2.1.8" />
+	    <PackageReference Include="Unity" Version="5.11.10" />
+	    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+	    <PackageReference Include="Xam.Plugin.Media" Version="6.0.2" />
+	    <PackageReference Include="ZXing.Net.Maui" Version="0.4.0" />
+	    <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.30" />
+	    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.30" />
+	    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	    <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
+    </ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net.9.0-android'">
+        <PackageReference Include="FastAndroidCamera" Version="2.0.0" />
+        <PackageReference Include="CarouselView.Maui" Version="1.0.9" />
+        <PackageReference Include="GoogleGson" Version="2.11.0" />
+        <PackageReference Include="Plugin.CurrentActivity" Version="2.0.1.4" />
+        <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="2.1.8" />
+        <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.android" Version="1.1.14" />
+    </ItemGroup>
 </Project>
